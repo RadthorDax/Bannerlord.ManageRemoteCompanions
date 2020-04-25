@@ -2,17 +2,16 @@
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.ViewModelCollection;
 using TaleWorlds.CampaignSystem.ViewModelCollection.CharacterDeveloper;
-using TaleWorlds.Core;
-using TaleWorlds.Localization;
 
-namespace UpgradeRemoteCompanions
+namespace ManageRemoteCompanions
 {
     [HarmonyPatch(typeof(SkillVM), "IsPerkAvailable")]
     internal class PatchIsPerkAvailable
     {
         public static void Postfix(SkillVM __instance, PerkObject perk, ref bool __result)
         {
-            __result = perk.RequiredSkillValue <= __instance.Level;
+            if (Settings.Instance.Enabled)
+                __result = perk.RequiredSkillValue <= __instance.Level;
         }
     }
 
@@ -21,7 +20,8 @@ namespace UpgradeRemoteCompanions
     {
         public static void Prefix(ref bool isInSamePartyAsPlayer)
         {
-            isInSamePartyAsPlayer = true;
+            if (Settings.Instance.Enabled)
+                isInSamePartyAsPlayer = true;
         }
     }
 
@@ -30,7 +30,8 @@ namespace UpgradeRemoteCompanions
     {
         public static void Postfix(CharacterVM __instance, int currentFocusAmount, ref bool __result)
         {
-            __result = currentFocusAmount < 5 && __instance.UnspentCharacterPoints > 0;
+            if (Settings.Instance.Enabled)
+                __result = currentFocusAmount < 5 && __instance.UnspentCharacterPoints > 0;
         }
     }
 
@@ -39,7 +40,8 @@ namespace UpgradeRemoteCompanions
     {
         public static void Postfix(CharacterAttributeItemVM __instance)
         {
-            __instance.CanAddPoint = __instance.AttributeValue < 10 && __instance.UnspentAttributePoints > 0;
+            if (Settings.Instance.Enabled)
+                __instance.CanAddPoint = __instance.AttributeValue < 10 && __instance.UnspentAttributePoints > 0;
         }
     }
 }

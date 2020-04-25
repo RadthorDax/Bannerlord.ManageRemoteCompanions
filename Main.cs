@@ -3,7 +3,7 @@ using System;
 using System.Windows.Forms;
 using TaleWorlds.MountAndBlade;
 
-namespace UpgradeRemoteCompanions
+namespace ManageRemoteCompanions
 {
     internal class Main : MBSubModuleBase
     {
@@ -13,11 +13,11 @@ namespace UpgradeRemoteCompanions
 
             try
             {
-                new Harmony("com.radthordax.bannerlord.UpgradeRemoteCompanions").PatchAll();
+                new Harmony("com.radthordax.bannerlord.ManageRemoteCompanions").PatchAll();
             }
             catch (Exception e)
             {
-                MessageBox.Show(string.Format("Exception applying UpgradeRemoteCompanions Harmony patch:\n{0}", e.ToString()));
+                MessageBox.Show(string.Format("Exception applying ManageRemoteCompanions Harmony patch:\n{0}", e.ToString()));
             }
         }
     }

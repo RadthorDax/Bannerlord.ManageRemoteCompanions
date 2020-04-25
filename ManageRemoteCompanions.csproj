@@ -9,12 +9,19 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>S:\Games\_SteamGames\steamapps\common\Mount &amp; Blade II Bannerlord\Modules\UpgradeRemoteCompanions\bin\Win64_Shipping_Client\</OutputPath>
+    <OutputPath>S:\Games\_SteamGames\steamapps\common\Mount &amp; Blade II Bannerlord\Modules\ManageRemoteCompanions\bin\Win64_Shipping_Client\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
   </PropertyGroup>
 
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>S:\Games\_SteamGames\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\0Harmony.dll</HintPath>
+      <HintPath>..\_Harmony\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="MBOptionScreen">
+      <HintPath>..\_MBOptionScreen\MBOptionScreen.dll</HintPath>
     </Reference>
     <Reference Include="System.Windows.Forms">
       <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.Windows.Forms.dll</HintPath>
@@ -108,6 +115,9 @@
     </Reference>
     <Reference Include="TaleWorlds.Network">
       <HintPath>S:\Games\_SteamGames\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="TaleWorlds.ObjectSystem">
+      <HintPath>S:\Games\_SteamGames\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.ObjectSystem.dll</HintPath>
     </Reference>
     <Reference Include="TaleWorlds.PlatformService">
       <HintPath>S:\Games\_SteamGames\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.PlatformService.dll</HintPath>
