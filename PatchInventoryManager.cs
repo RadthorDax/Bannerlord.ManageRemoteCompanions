@@ -12,9 +12,15 @@ namespace ManageRemoteCompanions
             {
                 TroopRoster newRoster = new TroopRoster();
                 newRoster.Add(rightMemberRoster);
+
+                foreach (Hero hero in Clan.PlayerClan.Heroes)
+                    if (hero.IsAlive && !hero.IsChild && hero != Hero.MainHero && !newRoster.Contains(hero.CharacterObject))
+                        newRoster.AddToCounts(hero.CharacterObject, 1);
+
                 foreach (Hero hero in Clan.PlayerClan.Companions)
                     if (hero.IsAlive && hero.IsPlayerCompanion && !newRoster.Contains(hero.CharacterObject))
                         newRoster.AddToCounts(hero.CharacterObject, 1);
+
                 rightMemberRoster = newRoster;
             }
         }
