@@ -149,6 +149,9 @@
     <Reference Include="TaleWorlds.TwoDimension.Standalone">
       <HintPath>S:\Games\_SteamGames\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.TwoDimension.Standalone.dll</HintPath>
     </Reference>
+    <Reference Include="UIExtenderLib_2.0.0.1">
+      <HintPath>..\_BannerlordLibs\UIExtenderLib_2.0.0.1.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>
