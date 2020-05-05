@@ -30,7 +30,7 @@ namespace ManageRemoteCompanions
     {
         private ClanPartyItemVM _currentSelectedParty;
         private bool _canManageCurrentParty;
-        [DataSourceProperty] public bool CanManageCurrentParty => true;//_canManageCurrentParty;
+        [DataSourceProperty] public bool CanManageCurrentParty => _canManageCurrentParty;
 
         public ClanPartiesMixin(ClanPartiesVM vm) : base(vm)
         {
@@ -59,8 +59,7 @@ namespace ManageRemoteCompanions
 
         private bool calculateCanManageParty(ClanPartyItemVM p)
         {
-            bool possible = p != null && p.Party != null && p.Party.MobileParty != null;
-            if (possible)
+            if (p != null && p.Party != null && p.Party.MobileParty != null)
             {
                 if (p.Party.MobileParty.IsGarrison)
                     return Settings.Instance.ManageGarrisons;
