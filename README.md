@@ -1,5 +1,5 @@
 # [Manage Remote Companions](https://www.nexusmods.com/mountandblade2bannerlord/mods/698)
-A mod for Mount &amp; Blade II: Bannerlord to manage remote companions and asult family members.
+A mod for Mount &amp; Blade II: Bannerlord to manage remote companions and adult family members.
 _____________________
 Allows you to manage your companions when they aren't in your party: manage their equipment, allocate perks, and spend their attribute and focus points.
 _____________________
