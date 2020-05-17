@@ -1,9 +1,0 @@
-<Widget DataSource="{..}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="251" SuggestedHeight="64" VerticalAlignment="Center" IsVisible="@CanManageCurrentParty">
-  <Children>
-    <ButtonWidget DoNotPassEventsToChildren="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="251" SuggestedHeight="64" VerticalAlignment="Center" Brush="Popup.Cancel.Button" IsEnabled="@CanManageCurrentParty" UpdateChildrenStates="true" Command.Click="ExecuteManageCurrentParty">
-      <Children>
-        <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Popup.Button.Text" Text="Manage Troops" />
-      </Children>
-    </ButtonWidget>
-  </Children>
-</Widget>
