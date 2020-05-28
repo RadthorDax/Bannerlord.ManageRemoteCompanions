@@ -10,7 +10,7 @@ namespace ManageRemoteCompanions
     {
         public static void Postfix(SkillVM __instance, PerkObject perk, ref bool __result)
         {
-            if (Settings.Instance.Enabled)
+            if (Settings.Instance.Enabled && Settings.Instance.CharacterUpgrades)
                 __result = perk.RequiredSkillValue <= __instance.Level;
         }
     }
@@ -20,7 +20,7 @@ namespace ManageRemoteCompanions
     {
         public static void Prefix(ref bool isInSamePartyAsPlayer)
         {
-            if (Settings.Instance.Enabled)
+            if (Settings.Instance.Enabled && Settings.Instance.CharacterUpgrades)
                 isInSamePartyAsPlayer = true;
         }
     }
@@ -30,7 +30,7 @@ namespace ManageRemoteCompanions
     {
         public static void Postfix(CharacterVM __instance, int currentFocusAmount, ref bool __result)
         {
-            if (Settings.Instance.Enabled)
+            if (Settings.Instance.Enabled && Settings.Instance.CharacterUpgrades)
                 __result = currentFocusAmount < 5 && __instance.UnspentCharacterPoints > 0;
         }
     }
@@ -40,7 +40,7 @@ namespace ManageRemoteCompanions
     {
         public static void Postfix(CharacterAttributeItemVM __instance)
         {
-            if (Settings.Instance.Enabled)
+            if (Settings.Instance.Enabled && Settings.Instance.CharacterUpgrades)
                 __instance.CanAddPoint = __instance.AttributeValue < 10 && __instance.UnspentAttributePoints > 0;
         }
     }
