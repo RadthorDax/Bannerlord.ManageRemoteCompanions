@@ -1,20 +1,20 @@
-﻿using MBOptionScreen.Attributes;
-using MBOptionScreen.Attributes.v2;
-using MBOptionScreen.Settings;
+﻿using MCM.Abstractions.Attributes;
+using MCM.Abstractions.Attributes.v2;
+using MCM.Abstractions.Settings.Base.Global;
 
 namespace ManageRemoteCompanions
 {
-    public class Settings : AttributeSettings<Settings>
+    public class Settings : AttributeGlobalSettings<Settings>
     {
-        public override string ModName => "Manage Remote Companions";
-        public override string ModuleFolderName => "ManageRemoteCompanions";
+        public override string DisplayName => "Manage Remote Companions";
+        public override string FolderName => "ManageRemoteCompanions";
 
         // Only update Id version when making changes to settings options that are not backwards compatible.
-        public override string Id { get; set; } = "Dax.ManageRemoteCompanions_v2.0.0";
+        public override string Id { get; } = "Dax.ManageRemoteCompanions_v2.0.0";
 
 
         [SettingPropertyBool("Enabled", Order = 1, RequireRestart = false, HintText = "Toggle this mod on or off.")]
-        [SettingPropertyGroup("Enabled", isMainToggle: true)]
+        [SettingPropertyGroup("Enabled", IsMainToggle = true)]
         public bool Enabled { get; set; } = true;
 
         [SettingPropertyBool("Charcter Upgrades", Order = 2, RequireRestart = false, HintText = "Allows allocating perks, attribute points and focus points for remote companions.")]
@@ -26,7 +26,7 @@ namespace ManageRemoteCompanions
         public bool ApplyInventoryPatch { get; set; } = false;
 
         [SettingPropertyBool("Enable Manage Troops", Order = 4, RequireRestart = false, HintText = "Enable the management of party troops from the Clan Parties screen. Just clicking on the party will open the management UI. A stable version will move this functionality to a separate button.")]
-        [SettingPropertyGroup("Enabled/Manage Troops [EXPERIMENTAL]", isMainToggle: true)]
+        [SettingPropertyGroup("Enabled/Manage Troops [EXPERIMENTAL]", IsMainToggle = true)]
         public bool ManageTroops { get; set; } = false;
 
         [SettingPropertyBool("Manage Troops of Companion Parties", Order = 5, RequireRestart = false, HintText = "Enables troop management for Clan Parties.")]
