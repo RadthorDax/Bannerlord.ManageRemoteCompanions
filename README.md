@@ -12,13 +12,13 @@ In light of the new inventory management feature, I've changed the name of this 
 
 
 ## Game Versions:
-- ☑ e1.4.0 BETA
-- ☑ e1.3.0
+- ☑ e1.4.1 BETA
+- ☑ e1.4.0
 
 
 ## Installation:
 - Preferably use Vortex, but if you can't, copy the ManageRemoteCompanions folder extracted from the zip archive into Bannerlord's "Modules" directory.
-- You may need to unblock the three .dll files (0Harmony.dll, ManageRemoteCompanions.dll and MBOptionScreen.dll) found in this mod's "bin/Win64_Shipping_Client" directory.
+- You may need to unblock all the .dll files found in this mod's "bin/Win64_Shipping_Client" directory.
 
 
 ## Compatibility:
