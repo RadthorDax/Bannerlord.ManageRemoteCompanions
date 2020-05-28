@@ -1,0 +1,17 @@
+<Prefab>
+  <Window>
+
+    <Widget DataSource="{..}" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="251" SuggestedHeight="64" VerticalAlignment="Center" IsVisible="@CanManageTroops">
+      <Children>
+
+        <ButtonWidget DoNotPassEventsToChildren="true" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="251" SuggestedHeight="64" VerticalAlignment="Center" Brush="Popup.Cancel.Button" IsEnabled="@CanManageTroops" UpdateChildrenStates="true" Command.Click="ExecuteManageTroops">
+          <Children>
+            <TextWidget WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Brush="Popup.Button.Text" Text="Manage Troops" />
+          </Children>
+        </ButtonWidget>
+        
+      </Children>
+    </Widget>
+
+  </Window>
+</Prefab>
